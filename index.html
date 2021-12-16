@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="shortcut icon" href="images/shenlong.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <title>VideoJuego Dbz</title>
+</head>
+
+<body>
+    <!-- Audio de fondo para el juego-->
+    <audio src="" type="audio/mpeg" id="music_fondo" loop="true" autoplay="true" hidden></audio>
+
+    <!-- modal para mostrar instrucciones al abrir el juego -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header" id="modal-header">
+                    <h4 class="modal-title" id="staticBackdropLabel">DRAGON BALL Z</h4>
+                </div>
+                <div class="modal-body" id="modal-body">
+                    <div class="content-intruccion">
+                        <p>Intrucciones de juego:<br>
+                            <img src="images/bola-dragon.png" alt="" srcset="" class="bola-dragon" width="30px"
+                                height="30px"> Para cambiar de<u> scenario </u> click en el logo de dragon
+                            ball z:<br>
+                            <center><img src="images/boton-scenario.png" alt="imagen" width="170px" height="100%"
+                                    id="boton_scenario"></center><br>
+                            <img src="images/bola-dragon.png" alt="" srcset="" class="bola-dragon" width="30px"
+                                height="30px"> Para moverse presiones teclas <u> A,W,D </u><br><br>
+                               
+
+                        </p>
+
+                    </div><br>
+                    <small><strong>videojuego de dbz hecho con js, html, jquery y css sin fines de
+                            lucro.</strong><br>
+                            <center><strong>Este videojuego esta en fase<u> Beta (0.1.1) Solo para PC</strong></center> </u></small>
+                </div>
+                <div class="modal-footer" id="modal-footer">
+                    <button type="button" class="btn btn-warning" id="btn-warning"
+                        data-bs-dismiss="modal">!jugar!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- fin del modal -->
+
+    <!-- Contenedor de todo el juego-->
+    <div class="container">
+        <!-- Contenedor de imagen de fondo(scenario)-->
+        <img src="images/fondo10.jpg" alt="imagen" class="img-fondo" id="img_fondo">
+        <!-- Imagen de inicio de juego y vida de peleadores-->
+        <img src="images/boton-inicio.png" alt="imagen" class="img_comienzo" id="img_comienzo">
+        <div class="life-goku" id="life_goku">
+            <h5 style="color:#F0FFF0; font-size: 178%">Goku</h5>
+            <img src="images/vida-alta.png" alt="" id="vida_alta" class="img_vidalta" width="250px" height="75px">
+        </div>
+        <!-- Contenedor de barras de vida-->
+        <div class="life-vegeta" id="life_vegeta">
+            <h5 style="color:#F0FFF0; font-size: 178%">Vegeta</h5>
+            <img src="images/vida-alta.png" alt="" id="vida_alta2" class="img_vidalta2" width="250px" height="75px">
+        </div>
+        <!-- Contenedor de shenlong-->
+        <div class="group-shenlong">
+            <img src="images/boton-scenario.png" alt="imagen" class="boton-scenario">
+            <img src="images/shenlong.png" alt="imagen" class="img-shenlong" id="img_shenlong">
+        </div>
+        <!-- Contenedor de goku-->
+        <div class="group-peleadores">
+            <img src="images/golpear.png" alt="imagen" class="img-golpear" id="img_golpear">
+            <img src="images/goku.png" alt="imagen" class="img-goku" id="img_goku">
+            <!-- Contenedor de vegeta-->
+            <img src="images/vegeta.png" alt="imagen" class="img-vegeta" id="img_vegeta">
+        </div>
+    </div>
+    <!-- Fin del contenedor del juego-->
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
+    </script>
+<script src="js/function.js" type="module"></script>
+</html>
