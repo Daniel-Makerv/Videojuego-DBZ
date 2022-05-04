@@ -12,7 +12,6 @@
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <title>VideoJuego Dbz</title>
 </head>
-
 <body>
     <!-- Audio de fondo para el juego-->
     <audio src="" type="audio/mpeg" id="music_fondo" loop="true" autoplay="true" hidden></audio>
@@ -29,20 +28,30 @@
                     <div class="content-intruccion">
                         <p>Intrucciones de juego:<br>
                             <img src="images/bola-dragon.png" alt="" srcset="" class="bola-dragon" width="30px"
-                                height="30px"> Para cambiar de<u> scenario </u> click en el logo de dragon
+                                height="30px"> Para cambiar de<u> scenario y tema</u> click en el logo de dragon
                             ball z:<br>
                             <center><img src="images/boton-scenario.png" alt="imagen" width="170px" height="100%"
                                     id="boton_scenario"></center><br>
                             <img src="images/bola-dragon.png" alt="" srcset="" class="bola-dragon" width="30px"
                                 height="30px"> Para moverse presiones teclas <u> A,W,D </u><br><br>
-                               
-
+                            <img src="images/bola-dragon.png" alt="" srcset="" class="bola-dragon" width="30px"
+                                height="30px"> Selecione su personaje (click en el nombre para cambiar)
+                            <center><img src="images/goku.png" alt="imagen" id="imagen_personage" width="120px"
+                                    height="100%"></center>
+                            <center><img src="images/bola-dragon.png" alt="" srcset="" class="bola-dragon" width="30px"
+                                    height="30px"><u id="boton_personage1">Goku normal</u></center>
+                            <img src="images/bola-dragon.png" alt="" srcset="" class="bola-dragon" width="30px"
+                                height="30px"> Selecione su rival:(click en el nombre para cambiar)
+                            <center><img src="images/vegeta.png" alt="imagen" width="120px" height="100%"
+                                id="imagen_personage2"></center>
+                            <center><img src="images/bola-dragon.png" class="bola-dragon" alt="" srcset="" width="30px"
+                                    height="30px"><u id="boton_personage2">Vegeta normal</u></center>
                         </p>
-
-                    </div><br>
+                    </div>
                     <small><strong>videojuego de dbz hecho con js, html, jquery y css sin fines de
                             lucro.</strong><br>
-                            <center><strong>Este videojuego esta en fase<u> Beta (0.1.1) Solo para PC</strong></center> </u></small>
+                        <center><strong>Este videojuego esta en fase<u> Beta (0.1.3) Solo para PC</strong></center> </u>
+                    </small>
                 </div>
                 <div class="modal-footer" id="modal-footer">
                     <button type="button" class="btn btn-warning" id="btn-warning"
@@ -88,4 +97,5 @@
     integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
     </script>
 <script src="js/function.js" type="module"></script>
+
 </html>

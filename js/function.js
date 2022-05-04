@@ -2,6 +2,10 @@ import { movePersonageGoku, gokuImg } from "./function_move_goku.js";
 import { movePersonageVegeta, vegetaImg } from "./function_move_vegeta.js";
 import { imprWinner, imprWinnerTwo } from "./function_winner.js";
 //funcion para cargar botones en celular (beta) import {loadKeysGame, backgroundWidth} from "./load_buttons.js";
+import {
+  randomPersonage,
+  randomPersonagAverse,
+} from "./function_select_personages.js"; //funcion para importar los personajes
 
 let alertStart = document.getElementById("btn-warning");
 let randomImage = document.getElementById("boton_scenario");
@@ -28,27 +32,36 @@ $(document).ready(function () {
 });
 
 randomImage.addEventListener("click", () => {
-  let imagesArray = [
-    "fondo.jpg",
-    "fondo2.jpg",
-    "fondo3.jpg",
-    "fondo4.jpg",
-    "fondo5.jpg",
-    "fondo6.jpg",
-    "fondo7.jpg",
-    "fondo8.jpg",
-    "fondo9.jpg",
-    "fondo10.jpg",
+  let scenarioArray = [
+    { scenario: "fondo.jpg", music: "cancion-principal.mp3"},
+    { scenario: "fondo3.jpg", music: "bardock-Dragon-Ball-Z.mp3" },
+    { scenario: "fondo4.jpg", music: "Unmei-Dragon-Ball-Z.mp3" },
+    { scenario: "fondo5.jpg", music: "Planeta-Supremo-Dragon Ball Z.mp3" },
+    { scenario: "fondo6.jpg", music: "Nameku-Dragon-Ball-Z.mp3" },
+    { scenario: "fondo7.jpg", music: "Ciudad-Dragon-Ball-Z.mp3" },
+    { scenario: "fondo8.jpg", music: "Triste-Dragon-ball-z.mp3" },
+    { scenario: "fondo9.jpg", music: "Ciudad-Dragon-Ball-Z.mp3" },
+    { scenario: "fondo10.jpg", music: "torneo-artes-Dragon-ball-z.mp3" },
   ];
   //obtener un valor numerico aleatorio con Math
-  let random_index = Math.floor(Math.random() * imagesArray.length);
-  let selected_image = imagesArray[random_index];
-  document.getElementById("img_fondo").src = `../images/${selected_image}`;
+  let random_index = Math.floor(Math.random() * scenarioArray.length);
+  let selected_image = scenarioArray[random_index];
+  document.getElementById("img_fondo").src = `../images/${selected_image.scenario}`;
+  CONTROLVOLUME.src = `../music/${selected_image.music}`;
 });
 
-alertStart.addEventListener("click", () => {
-  CONTROLVOLUME.src = "music/musica-pelea.mp3";
+//importando fichero para generar personajes
+let randomPersonage1 = document
+  .getElementById("boton_personage1")
+  .addEventListener("click", randomPersonage);
+let randomPersonage2 = document
+  .getElementById("boton_personage2")
+  .addEventListener("click", randomPersonagAverse);
 
+alertStart.addEventListener("click", () => {
+  CONTROLVOLUME;
+
+  // importando personages seleccionados
   const INITGAME = () => {
     //importando los movimientos de los personajes
     movePersonageGoku();

@@ -113,6 +113,9 @@
   top: 1.7cm;
 }
 
+.bola-dragon{
+  text-decoration-line: underline;
+}
 /* Hacer responsive */
 @media (max-width: 500px) {
   .img-goku {
